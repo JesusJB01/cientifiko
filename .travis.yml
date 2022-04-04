@@ -8,15 +8,15 @@ git:
   depth: 3
 script:
   - yarn build
-  
+
 deploy: 
-  provider: pages
+  provider: "pages",
   edge: true
-  skip-cleanup: true
+  skip_cleanup: true
   keep-history: true
   github-token: $GITHUB_TOKEN
   local-dir: dist/
-  target_branch: gh-pages
-  commit_message: "Deploy Release"
+  target_branch: "gh-pages",
+  commit_message: "Deploy Release",
   on:
     branch: master
